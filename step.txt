@@ -1,0 +1,17 @@
+Step 1: Baca dataset
+
+Step 2: Tipe data diubah menjadi tipe yang seharusnya yaitu customer_id dari string ke int64, quantity dari string ke int64, item_price dari string ke int64.
+
+Step 3: transform product_value supaya bentuknya seragam dengan format PXXXX, assign ke kolom baru "product_id", dan drop kolom "product_value", jika terdapat nan gantilah dengan "unknown".
+
+Step 4: tranform order_date menjadi value dengan format YYYY-mm-dd
+
+Step 5: cek data hilang dari tiap kolom dan kemudian isi missing value yaitu di brand dengan "no_brand", dan cek dulu bagaimana missing value di city & province - isi missing value di city dan province dengan "unknown"
+
+Step 6: create column city/province dari gabungan city & province
+
+Step 7: membuat index berdasarkan city_provice, order_date, customer_id, order_id, product_id (cek index)
+
+Step 8: membuat kolom "total_price" sebagai hasil perkalian quantity dengan item_price
+
+Step 9: slice data hanya untuk Jan 2019
